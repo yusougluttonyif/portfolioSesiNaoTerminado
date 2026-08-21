@@ -115,6 +115,7 @@
     
   <script>
     let straightbet = 0;
+    let aishiteru = 0;
     const firstText = document.getElementById("begin");
     const firstScreen = document.querySelectorAll("body, html");
     const satellaHand = document.getElementById("hhh");
@@ -208,6 +209,10 @@
       firstText.classList.add("clicked");
       firstText.innerHTML = "Rc MO çR A :";
       setTimeout(() => {
+        aishiteru = new Audio("musicas/aishiteru.mp3");
+        aishiteru.loop = false;
+        aishiteru.currentTime = 0;
+        aishiteru.play();
         firstText.innerHTML = "愛してる";
         firstText.style.height = "400px";
         firstText.style.transition = "all 2s ease";
