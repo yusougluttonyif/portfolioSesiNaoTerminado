@@ -254,19 +254,22 @@
       }, 4200);
       setTimeout(() => {
         satellaHand.style.transition = "all 0.6s ease-out";
-        satellaHand.style.height = "10000px";
-        satellaHand.style.width = "10000px";
-      }, 5700);
+        satellaHand.style.height = "2000px";
+        satellaHand.style.width = "2000px";
+      }, 6000);
       setTimeout(() => {
         straightbet = new Audio("musicas/straightbet.mp3");
         straightbet.currentTime = 0;
         straightbet.loop = true;
         straightbet.volume = 0.5;
         straightbet.play();
-      }, 5900);
+      }, 6400);
+      setTimeout(() => {
+        satellaHand.style.opacity = 0;
+        firstText.style.opacity = 0;
+      },6700);
     }
   </script>
-         
 </body>
 
-</html>>
+</html>
