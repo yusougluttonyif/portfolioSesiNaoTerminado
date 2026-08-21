@@ -114,6 +114,7 @@
              
     
   <script>
+    let straightbet = 0;
     const firstText = document.getElementById("begin");
     const firstScreen = document.querySelectorAll("body, html");
     const satellaHand = document.getElementById("hhh");
@@ -252,7 +253,10 @@
         satellaHand.style.width = "10000px";
       }, 5700);
       setTimeout(() => {
-        new Audio("musicas/straightbet.mp3")
+        straightbet = new Audio("musicas/straightbet.mp3");
+        straightbet.currentTime = 0;
+        straightbet.loop = true;
+        straightbet.volume = 0.5;
       }, 5900);
     }
   </script>
