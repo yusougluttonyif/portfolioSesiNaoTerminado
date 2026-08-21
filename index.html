@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+<head>
+          
+      
+    
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet" />
+             
+     <style>
+    .hand {
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      top: 50%;
+      z-index: 9999999999999999999999999999999999;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      transition: all 0.1s ease;
+      align-items: center;
+      text-align: center;
+      background-color: black;
+      font-family: 'Cinzel', serif;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    .button {
+      height: 100px;
+      width: 200px;
+      top: 50%;
+      position: absolute;
+      left: 50%;
+      background: linear-gradient(to top, orange 50%, transparent 50%);
+      background-size: 100% 200%;
+      background-position: left top;
+      border: 1px solid white;
+      border-radius: 20px;
+      color: white;
+      transform: translate(-50%, -50%);
+      transition: all 0.4s ease, skewX 0.4s ease, skewY 0.4s ease;
+      font-size: clamp(20px, 2vw, 40px);
+      font-family: 'Cinzel', serif;
+      cursor: pointer;
+    }
+
+    .button:not(.clicked):hover {
+      animation: dance 1s infinite alternate-reverse;
+      border: 1px solid orange;
+      transform: translate(-50%, -50%);
+      transition: all 0.4s ease;
+      background-position: left bottom;
+      box-shadow: 0px 0px 10px orange;
+    }
+
+    .button.clicked {
+      transform: translate(-50%, -50%);
+      background: transparent;
+      box-shadow: 0px 0px 10px #9A0AEC;
+      cursor: default;
+      animation: tweak 0.4s;
+      transition: all 0.4s ease;
+    }
+
+    @keyframes tweak {
+      0% {
+        transform: translate(-50%, -50%) skewX(-50deg);
+      }
+
+      50% {
+        transform: translate(-50%, -50%) skewX(50deg);
+      }
+
+      100% {
+        transform: translate(-50%, -50%)  skewX(0deg);
+      }
+    }
+
+    @keyframes dance {
+      0% {
+        transform: translate(-50%, -50%) skewY(0deg) skewX(0deg);
+      }
+
+      50% {
+        transform: translate(-50%, -50%)  skewY(-5deg) skewX(5deg);
+      }
+
+      100% {
+        transform: translate(-50%, -50%)  skewY(5deg) skewX(-5deg);
+      }
+    }
+  </style>
+         
+</head>
+  
+
+<body>
+           <img class="hand" id="hhh"
+    src="https://i.postimg.cc/yW4XDKGT/66abacc9a8fa70f533d3b324d1ddf8e4.webp"></img>     
+      <div>
+            <button class="button" id="begin" onclick="firstTextSatella()" onmouseover="changeFirstText()"        
+      onmouseleave="returnFirstText()">COMEÇAR</button>
+          </div>
+             
+    
+  <script>
+    const firstText = document.getElementById("begin");
+    const firstScreen = document.querySelectorAll("body, html");
+    const satellaHand = document.getElementById("hhh");
+    function changeFirstText() {
+      firstText.style.color = "#00000000";
+      setTimeout(() => {
+        firstText.innerHTML = "RE:COMEÇAR";
+        firstText.style.color = "#000000";
+      }, 401);
+    }
+    function returnFirstText() {
+      firstText.style.color = "#ffffff00";
+      setTimeout(() => {
+        firstText.innerHTML = "COMEÇAR";
+        firstText.style.color = "#ffffff";
+      }, 401);
+    }
+    function firstTextSatella() {
+      firstText.style.borderRadius = "500px";
+      firstText.style.background = "orange";
+      firstText.style.boxShadow = "0px 0px 10px orange";
+      firstText.style.border = "none";
+      setTimeout(() => {
+        firstText.style.transform = " translate(-50%, -50%) skewX(10deg) skewY(-20deg)";
+        firstText.style.transition = "all 0.15s ease";
+      }, 200);
+      setTimeout(() => {
+        firstText.style.borderRadius = "100px";
+        firstText.innerHTML = "Rc MO çR A :";
+        firstText.style.height = "100px";
+        firstText.style.width = "200px";
+      }, 450);
+      setTimeout(() => {
+        firstText.style.transform = "translate(-50%, -50%) skewX(-30deg) skewY(30deg)";
+      }, 550);
+      setTimeout(() => {
+        firstText.style.borderRadius = "300px";
+        firstText.innerHTML = "Mcs Or;; Kpoe";
+        firstText.style.height = "200px";
+      }, 650);
+      setTimeout(() => {
+        firstText.style.transform = "translate(-50%, -50%) skewX(32deg) skewY(10deg)";
+      }, 750);
+      setTimeout(() => {
+        firstText.style.borderRadius = "500px";
+        firstText.style.width = "300px";
+        firstText.innerHTML = ": jbsdiAU";
+        firstText.style.height = "300px";
+      }, 800);
+      setTimeout(() => {
+        firstText.style.height = "400px";
+        firstText.innerHTML = ": U";
+      }, 900);
+      setTimeout(() => {
+        firstText.innerHTML = ".";
+        firstText.style.transform = "translate(-50%, -50%) skewX(0deg) skewY(0deg)";
+        firstText.style.transition = "all 0.5s ease";
+        firstText.style.height = "400px";
+        firstText.style.width = "400px";
+      }, 1000);
+      setTimeout(() => {
+        firstText.style.height = "400px";
+        firstText.style.width = "400px";
+        firstText.style.color = "#00000000";
+        firstText.style.border = "10px solid #000000";
+        firstText.style.outline = "3px solid white";
+        firstText.style.boxShadow = "0px 0px 0px #ffffff00"
+      }, 1600);
+      setTimeout(() => {
+        firstText.style.background = "radial-gradient(circle, #FFA500,#ffffff 200%)";
+      }, 1650);
+      setTimeout(() => {
+        firstText.style.background = "radial-gradient(circle, #FFA500,#ffffff, #ffffff 200%)";
+      }, 1770);
+      setTimeout(() => {
+        firstText.style.background = "radial-gradient(circle, #FFA500, #ffffff, white, white 150%)";
+      }, 1800);
+      setTimeout(() => {
+        firstText.style.background = "radial-gradient(circle, #FFA500, #ffffff, white 125%, white, white, white, white)";
+      }, 1825);
+      setTimeout(() => {
+        firstText.style.background = "radial-gradient(circle, #FFA500, white, white, white, white, white, white, white, white, white, white, white, white)";
+      }, 1850);
+      setTimeout(() => {
+        firstText.style.background = "radial-gradient(circle,white, white)";
+      }, 1900);
+
+      firstText.onmouseleave = null;
+      firstText.onmouseover = null;
+      firstText.onclick = null;
+      firstText.classList.add("clicked");
+      firstText.innerHTML = "Rc MO çR A :";
+      setTimeout(() => {
+        firstText.innerHTML = "愛してる";
+        firstText.style.height = "400px";
+        firstText.style.transition = "all 2s ease";
+        firstText.style.width = "400px";
+        firstText.style.color = "#9A0AEC";
+        firstText.style.fontSize = "clamp(50px, 5vw, 90px)"
+        firstText.style.border = "1px solid #9A0AEC";
+        firstText.style.boxShadow = "0px 0px 25px #9A0AEC";
+        firstText.style.outline = "3px solid #9A0AEC";
+      }, 3200);
+      setTimeout(() => {
+        firstText.style.background = "#9A0AEC";
+        firstScreen.forEach(ht => {
+          ht.style.background = "#410266";
+        });
+        firstText.style.width = "410px";
+        firstText.style.height = "410px";
+        firstText.style.borderRadius = "410px";
+
+      }, 3400);
+      setTimeout(() => {
+        firstText.style.background = "#ffffff73";
+        firstScreen.forEach(ht => {
+          ht.style.background = "#000000";
+          ht.style.transition = "all 0.5s ease";
+        });
+      }, 3600);
+      setTimeout(() => {
+        firstText.style.background = "#ffffff42";
+        firstText.style.width = "400px";
+        firstText.style.height = "400px";
+        firstText.style.borderRadius = "400px";
+      }, 3800);
+      setTimeout(() => {
+        firstText.style.background = "#ffffff19";
+      }, 4000);
+      setTimeout(() => {
+        firstText.style.background = "#000000";
+      }, 4200);
+      setTimeout(() => {
+        satellaHand.style.transition = "all 0.6s ease-out";
+        satellaHand.style.height = "10000px";
+        satellaHand.style.width = "10000px";
+      }, 5700);
+    }
+  </script>
+         
+</body>
+
+</html>
